@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mi sitio CV </title>
+    <link rel="stylesheet" href="css/css-gg.css">
+
+    <link rel="shortcut icon" href="resources/logo.svg" type="image/svg">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/mobile.css">
+
+    <script src="js/site.js"></script>
+</head>
+
+<body>
+    <div class="main-content">
+        <aside>
+            <div class="profile">
+                <img src="resources/IMG-20231224-WA0013~2.jpg" id="photo-profile" class="my-photo">
+                <div>
+                    <h1 class="title">Karen Moreno Tellez</h1>
+                    <div class="badge-profile">Programadora</div>
+                    <div class="social">
+                        <a href="facebook.com" target="_blank"><i class="gg-facebook"></i></a>
+                        <a href="x.com" target="_blank"><i class="gg-twitter"></i></a>
+                        <a href="youtube.com" target="_blank"><i class="gg-youtube"></i></a>
+                        <a href="pokemon.com" target="_blank"><i class="gg-pokemon"></i></a>
+                    </div>
+                </div>
+                <div class="info">
+                    <ul class="contacts-block">
+                        <li class="contacts-block-item"><i class="gg-calendar"></i>&nbsp;&nbsp;13 de Agosto del 2004</li>
+                        <li class="contacts-block-item"><i class="gg-pin"></i>&nbsp;&nbsp;Puebla, Puebla</li>
+                        <li class="contacts-block-item"><i class="gg-mail"></i><a
+                                href="#">&nbsp;&nbsp;karenmt13804@gmail.com</a></li>
+                        <li class="contacts-block-item"><i class="gg-phone"></i>&nbsp;+52 22 24 60 53 74</li>
+                        <li class="contacts-block-item"><i class="gg-phone"></i><a href="#">&nbsp;&nbsp;Skype:
+                                katy_1384</a></li>
+                    </ul>
+                    <a href="media/cv.pdf" class="btn">Descargar CV</a>
+                </div>
+            </div>
+        </aside>
+
+        <sectiom class="resume">
+
+            <h2 class="title bordered">Portfolio</h2>
+            <div class="portfolio">
+                <img src="resources/IMG-20231224-WA0013~2.jpg" onclick="showImage(this)">
+                <img src="resources/IMG_20250204_133056.jpg" onclick="showImage(this)">
+                <img src="resources/IMG_20250204_133122.jpg" onclick="showImage(this)">
+                <img src="resources/IMG_20250204_133208.jpg" onclick="showImage(this)">
+                <img src="resources/IMG_20250204_133506.jpg" onclick="showImage(this)">
+                <div class="modal" id="preview">
+                    <div class="modal-content">
+                        <span class="close-modal" onclick="cerrarModal()"><i class="gg-close"></i></span>
+                        <img id="modal-image" src="" alt="Preview">
+                    </div>
+                </div>
+            </div>
+
+
+            <header>
+                <div class="menu-circle">
+                    <i class="gg-menu-oreos" onclick="toggleMenu()"></i>
+                </div>
+                <div class="inner-menu js-menu">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="index.html">Acerca de</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="portfolio.html">Portafolio</a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+
+        </sectiom>
+    </div>
+    <footer>Autor: Alberto Jimenez Rosas</footer>
+    <a class="btn" onclick="SayWelcome()"><i class="font-icon icon-dowload"></i>Hola</a>
+
+    <script>
+        function showImage(image) {
+            const modal = document.getElementById("preview");
+            const modalImage = document.getElementById("modal-image");
+            modal.style.display = "flex";
+            modalImage.src = image.src;
+        }
+
+        function cerrarModal() {
+            const modal = document.getElementById("preview");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
